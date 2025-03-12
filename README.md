@@ -1,12 +1,12 @@
-# gerenciadorCadastros
+### gerenciadorCadastros
 
-### Gerenciador de cadastro de profissionais e suas expertises
+# Gerenciador de cadastro de profissionais e suas expertises
 
  Programa que tem como fim, efetuar o cadastro de profissionais
  da area medica e suas expertises
 
 
-## Alguns comandos uteis para a configuração do ambiente
+# Alguns comandos uteis para a configuração do ambiente
 
  py -m venv my-venv                  -- cria ambiente virtual
 
@@ -22,42 +22,7 @@
 
  Flask run                           -- executa flask
 
-
-## Hierarquia dos arquivos
-
-project/
-│
-├── templates/                              # definições da visao do aplicativo
-│   ├── alterarCadastro.html
-│   ├── cadastrarEspecialidades.html
-│   ├── cadastrarProfissionais.html
-│   ├── consultarDisponibilidade.html
-│   ├── editarProfissional.html
-│   ├── listarProfissionais.html
-│   ├── operacao_sucesso.html
-│   ├── resultadoDisponibilidade.html
-│   └── sistema.html
-│
-├── modelos/                                 # Definições dos modelos de dados
-|   ├── disponibilidade.py
-│   ├── profissionais.py
-│   └── especialidades.py
-│
-├── servicos/                                 # Definições dos modelos de dados
-│   └── sistema_facade.py
-|
-├── controladores/                            # camada de controle superior
-|   ├── consultar_disponibilidade.py
-│   ├── cadastros.py
-│   └── update_profissional.py
-│
-├── testes/  
-|   ├── test_real.py
-|   └── test_simulado.py
-|
-└── app.py                                  # Arquivo principal que executa o aplicativo Flask
-
-## Dependencias
+# Dependencias
 
  SGBD Mysql
  Interpretador python
@@ -65,7 +30,7 @@ project/
  Flask
  módulo unittest
 
-  ## Observação
+ # Observação
  Alem de cumprir todas as dependencias é fundamental atualizar a 
  configuração do banco de dados nos arquivos do diretorio models 
  com os dados do seu banco.
