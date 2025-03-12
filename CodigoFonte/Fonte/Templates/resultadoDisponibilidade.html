@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado da Disponibilidade</title>
+</head>
+<body>
+    <h1>Resultado da Disponibilidade</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Especialidade</th>
+                <th>Dia da Semana</th>
+                <th>Horário de Início</th>
+                <th>Horário de Fim</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for resultado in resultados %}
+            <tr>
+                <td>{{ resultado[0] }}</td>
+                <td>{{ resultado[1] }}</td>
+                <td>{{ resultado[2] }}</td>
+                <td>{{ resultado[3] }}</td>
+                <td>{{ resultado[4] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <button onclick="window.location.href='/'">Voltar à página inicial</button>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema medico</title>
+    <style>
+        .botao {
+            display: block;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema gerenciador de profissionais e suas especialidades:</h1>
+ 
+    <form method="post" action="/submit">
+        <button type="button" onclick="window.location.href='/cadastrar_profissionais'" class="botao">Cadastrar profissionais</button>
+        <button type="button" onclick="window.location.href='/alterar_cadastro'" class="botao">Alterar informações de profissionais já cadastrados</button>
+        <button type="button" onclick="window.location.href='/cadastrar_especialidades'" class="botao">Cadastrar especialidades</button>
+        <button type="button" onclick="window.location.href='/consultar_disponibilidade'" class="botao">Consultar disponibilidade</button>
+    </form>
+</body>
+</html>

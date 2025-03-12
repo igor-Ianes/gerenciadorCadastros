@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listar Profissionais</title>
+</head>
+<body>
+    <h1>Profissionais Cadastrados</h1>
+    <ul>
+        {% for profissional in profissionais %}
+        <li>
+            {{ profissional.nome }} - <a href="/editar_profissional/{{ profissional.nome }}">Editar</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

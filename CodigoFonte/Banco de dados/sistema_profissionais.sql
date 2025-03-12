@@ -1,0 +1,30 @@
+CREATE DATABASE IF NOT EXISTS sistema_profissionais;
+USE sistema_profissionais;
+
+-- SELECT user, host FROM mysql.user;  -- Retorna informaçoes do seu banco
+
+CREATE TABLE ESPECIALIDADE (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    NOME VARCHAR(255) NOT NULL UNIQUE,	-- A restrição UNIQUE garante que a especialidade seja única
+    DESCRICAO TEXT
+);
+
+CREATE TABLE PROFISSIONAL (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    NOME VARCHAR(255) NOT NULL,
+    CPF VARCHAR(14) NOT NULL UNIQUE,  -- A restrição UNIQUE garante que o CPF seja único
+    CONTATO VARCHAR(255),
+    ESPECIALIDADE_ID INT,
+    FOREIGN KEY (ESPECIALIDADE_ID) REFERENCES ESPECIALIDADE(ID),
+	CHECK (CPF REGEXP '^[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}$'), -- Valida o formato do CPF
+	CHECK (CONTATO REGEXP '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$')  -- Valida o formato do email
+);
+
+CREATE TABLE DISPONIBILIDADE (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    PROFISSIONAL_ID INT NOT NULL,
+    DIA_SEMANA VARCHAR(50),
+    HORARIO_INICIO TIME,
+    HORARIO_FIM TIME,
+    FOREIGN KEY (PROFISSIONAL_ID) REFERENCES PROFISSIONAL(ID)
+);
