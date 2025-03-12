@@ -1,5 +1,3 @@
-### gerenciadorCadastros
-
 # Gerenciador de cadastro de profissionais e suas expertises
 
  Programa que tem como fim, efetuar o cadastro de profissionais
